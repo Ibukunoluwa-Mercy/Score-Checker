@@ -51,12 +51,7 @@ function checkGrade() {
 function checkResult() {
     let scoreResult = document.getElementById("inputResult").value;
     let resultCheck = document.getElementById("areaDisplay");
-    // if (scoreResult > 50) {
-    //     alert("Pass");
-    // }
-    // else {
-    //     alert("Try again next year");
-    // }
+
 
 let classification = "";
 
@@ -78,4 +73,15 @@ classification = "Second Class Honours (Lower Division)"
 }
 
 document.getElementById("areaDisplay").value = classification;
+}
+
+function postUtme() {
+    let utmeScore = document.getElementById("inputUtme").value;
+    let post = document.getElementById("utmePost");
+        if (parseFloat(utmeScore) >= 50) {
+        alert("Pass");
+    }
+    else {
+        alert("Try again next year");
+    }
 }
