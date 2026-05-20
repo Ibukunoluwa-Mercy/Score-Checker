@@ -11,18 +11,11 @@
 
 <body>
 
-    <!-- <div class="background">
-        <span class="circle s1"></span>
-        <span class="circle s2"></span>
-        <span class="circle s3"></span>
-        <span class="circle s4"></span>
-        <span class="circle s5"></span>
-    </div> -->
 
     <div class="card">
 
-        <h1>Grade System</h1>
-        <p>Check for your CGPA</p>
+        <h2>Grade System</h2>
+        <p>Check for your grade</p>
         <div class="button-card">
             <input type="text" placeholder="Enter your score" id="scoreInput">
             <button onclick="checkGrade()">Check</button>
@@ -37,6 +30,18 @@
     <audio id="soundSuccess" src="SOUNDS/excellent.mp3" preload="auto"></audio>
     <audio id="veryGood" src="SOUNDS/very-good.mp3" preload="auto"></audio>
 
+
+    <section class="card">
+<h2>Check your result</h2>
+<div class="button-card">
+    <input type="number" id="inputResult" placeholder="Enter score">
+<button onclick="checkResult()">Submit</button>
+</div>
+
+        <div class="result">
+            <input type="text" placeholder="see your grade" id="areaDisplay" readonly>
+        </div>
+    </section>
 </body>
 <script src="script.js"></script>
 

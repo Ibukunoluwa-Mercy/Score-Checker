@@ -45,3 +45,37 @@ function checkGrade() {
 
     resultGrade.value = `${grade} - ${remark}`;
 }
+
+
+
+function checkResult() {
+    let scoreResult = document.getElementById("inputResult").value;
+    let resultCheck = document.getElementById("areaDisplay");
+    // if (scoreResult > 50) {
+    //     alert("Pass");
+    // }
+    // else {
+    //     alert("Try again next year");
+    // }
+
+let classification = "";
+
+if (scoreResult >= 4.5 && scoreResult <= 5.0) {
+    classification = "First Class Honours"
+} else if(scoreResult >= 3.5 && scoreResult <= 4.49) {
+    classification = "Second Class Honours (Upper Division)"
+} else if (scoreResult >= 2.40 && scoreResult <= 3.49) {
+classification = "Second Class Honours (Lower Division)"
+} else if (scoreResult >= 1.50 && scoreResult <= 2.39){
+    classification = "Third Class Division"
+} else if (scoreResult >= 1.00 && scoreResult <= 1.49){
+    classification = "Pass"
+}else if (scoreResult >= 0.00 && scoreResult <= 0.99){
+    classification = "Fail"
+} else {
+    alert("Invalid Score");
+    return;
+}
+
+document.getElementById("areaDisplay").value = classification;
+}
